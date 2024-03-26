@@ -3,7 +3,7 @@
 * Official package: https://github.com/intro-stat-learning/ISLP
 
 # To run in Colab
-* click the "Open in Colab" button
+* click the "Open in Colab" button in each notebook
 # To run on your local machine (using anaconda)
 * Create a virtual env
 ```
