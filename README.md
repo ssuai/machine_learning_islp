@@ -17,3 +17,7 @@ conda create --name islp
 ```
 conda install jupyter matplotlib seaborn pandas scikit-learn statsmodels lxml -y
 ```
+* launch jupyter
+```
+jupyter notebook
+```
