@@ -1,1 +1,1 @@
-# machine_learning_islp
+# machine learning (ISLP version)
