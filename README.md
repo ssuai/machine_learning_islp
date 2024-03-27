@@ -11,7 +11,7 @@ conda create --name islp
 ```
 * activate it
 ```
-conda create --name islp
+conda activate islp
 ```
 * install required packages
 ```
