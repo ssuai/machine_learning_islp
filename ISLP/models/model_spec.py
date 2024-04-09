@@ -102,8 +102,17 @@ class Contrast(TransformerMixin, BaseEstimator):
         """
 
         Xa = np.asarray(X).reshape((-1,1))
-        self.encoder_ = OneHotEncoder(drop=None,
-                                      sparse_output=False).fit(Xa)
+
+        # check scikit-learn version for using OneHotEncoder
+        # https://github.com/ssuai/machine_learning_islp/issues/5
+        import sklearn
+        from packaging import version
+
+        if version.parse(sklearn.__version__) >= version.parse("1.2.0"):
+            self.encoder_ = OneHotEncoder(drop=None, sparse_output=False).fit(Xa)
+        else:
+            self.encoder_ = OneHotEncoder(drop=None, sparse=False).fit(Xa)
+
         cats = self.encoder_.categories_[0]
         column_names = [str(n) for n in cats]
 
